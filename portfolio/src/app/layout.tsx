@@ -17,7 +17,7 @@ export default function RootLayout({
   return (
     <html lang="no">
       <body
-        className={`${inter.className} antialiased w-screen min-h-screen bg-neutral-800 text-white`}
+        className={`${inter.className} max-w-screen min-h-screen bg-neutral-800 text-white`}
       >
         {children}
       </body>
