@@ -17,7 +17,8 @@ export default function RootLayout({
   return (
     <html lang="no">
       <body
-        className={`${inter.className} max-w-screen min-h-screen bg-neutral-800 text-white`}
+        className={`${inter.className} max-w-screen min-h-screen bg-[#232323] text-white`}
+        style={{ maxWidth: "100vw", overflowX: "hidden" }}
       >
         {children}
       </body>
