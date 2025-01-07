@@ -7,9 +7,9 @@ import Navbar from "./Navbar";
 import {motion, useInView} from 'motion/react';
 import Link from 'next/link';
 
-import { FaHtml5, FaCss3Alt, FaReact, FaPhp } from "react-icons/fa";
+import { FaHtml5, FaCss3Alt, FaReact, FaPhp, FaPaintBrush } from "react-icons/fa";
 import { RiTailwindCssFill, RiNextjsFill } from "react-icons/ri";
-import { SiJavascript } from "react-icons/si";
+import { SiJavascript, SiAdobephotoshop, SiAdobeillustrator, SiAdobeindesign, SiAdobexd, SiFigma, SiAdobepremierepro, SiAdobelightroomclassic, SiAdobeaftereffects } from "react-icons/si";
 import { PiReadCvLogoFill } from "react-icons/pi";
 import Footer from "./Footer";
 
@@ -22,6 +22,8 @@ export default function Home() {
   const isInView = useInView(ref, {once: true});
   const ref2 = useRef(null);
   const isInView2 = useInView(ref2, {once: true});
+  const ref3 = useRef(null);
+  const isInView3 = useInView(ref3, {once: true});
 
   return (
     <div className={`${inter.className} flex justify-center min-h-screen`}>
@@ -69,7 +71,7 @@ export default function Home() {
           initial="hidden"
           transition={{ duration: 0.5 }}
           animate={isInView ? "visible" : "hidden"}
-          className="px-96 py-40 flex justify-center items-center flex-col gap-10"
+          className="px-96 pt-40 pb-20 flex justify-center items-center flex-col gap-10"
         >
           <h1 ref={ref} className="text-2xl font-bold">Teknologier</h1>
           <p ref={ref} className="text-sm text-center">Jeg er en relativt allsidig utvikler og innholdsprodusent. Denne fleksibiliteten gjør at jeg raskt kan lære meg flere teknologier og ny programvare samtidig som jeg kan jobbe flytende med kunder og andre. Noen teknologier jeg for tiden aktivt bruker inkluderer følgende:</p>
@@ -203,6 +205,183 @@ export default function Home() {
             </motion.div>
           </div>
         </motion.div>
+
+        <motion.div
+          variants={{
+            hidden: { opacity: 0, y: 50 },
+            visible: { opacity: 1, y: 0 },
+          }}
+          initial="hidden"
+          transition={{ duration: 0.5 }}
+          animate={isInView3 ? "visible" : "hidden"}
+          className="px-96 pb-40 flex justify-center items-center flex-col gap-10"
+        >
+          {/*Progress bars*/}
+          <div ref={ref3} className="flex flex-col gap-5">
+            {/* Photoshop */}
+            <motion.div
+              variants={{
+                hidden: { opacity: 0, y: 50 },
+                visible: { opacity: 1, y: 0 },
+              }}
+              initial="hidden"
+              animate="visible"
+              transition={{ duration: 1 }}
+              className="flex flex-row gap-4 items-center"
+            >
+              <div className="flex flex-row items-center gap-2 w-36">
+                <SiAdobephotoshop className="text-2xl" />
+                <span className="text-sm">Photoshop</span>
+              </div>
+              <progress className="progress w-56" value={95} max="100"></progress>
+            </motion.div>
+
+            {/* Illustrator */}
+            <motion.div
+              variants={{
+                hidden: { opacity: 0, y: 50 },
+                visible: { opacity: 1, y: 0 },
+              }}
+              initial="hidden"
+              animate="visible"
+              transition={{ duration: 1 }}
+              className="flex flex-row gap-4 items-center"
+            >
+              <div className="flex flex-row items-center gap-2 w-36">
+                <SiAdobeillustrator className="text-2xl" />
+                <span className="text-sm">Illustrator</span>
+              </div>
+              <progress className="progress w-56" value={80} max="100"></progress>
+            </motion.div>
+
+            {/* InDesign */}
+            <motion.div
+              variants={{
+                hidden: { opacity: 0, y: 50 },
+                visible: { opacity: 1, y: 0 },
+              }}
+              initial="hidden"
+              animate="visible"
+              transition={{ duration: 1 }}
+              className="flex flex-row gap-4 items-center"
+            >
+              <div className="flex flex-row items-center gap-2 w-36">
+                <SiAdobeindesign className="text-2xl" />
+                <span className="text-sm">InDesign</span>
+              </div>
+              <progress className="progress w-56" value={96} max="100"></progress>
+            </motion.div>
+
+            {/* Paint.net */}
+            <motion.div
+              variants={{
+                hidden: { opacity: 0, y: 50 },
+                visible: { opacity: 1, y: 0 },
+              }}
+              initial="hidden"
+              animate="visible"
+              transition={{ duration: 1 }}
+              className="flex flex-row gap-4 items-center"
+            >
+              <div className="flex flex-row items-center gap-2 w-36">
+                <FaPaintBrush className="text-2xl" />
+                <span className="text-sm">Paint.net</span>
+              </div>
+              <progress className="progress w-56" value={70} max="100"></progress>
+            </motion.div>
+
+            {/* Adobe XD */}
+            <motion.div
+              variants={{
+                hidden: { opacity: 0, y: 50 },
+                visible: { opacity: 1, y: 0 },
+              }}
+              initial="hidden"
+              animate="visible"
+              transition={{ duration: 1 }}
+              className="flex flex-row gap-4 items-center"
+            >
+              <div className="flex flex-row items-center gap-2 w-36">
+                <SiAdobexd className="text-2xl" />
+                <span className="text-sm">Adobe XD</span>
+              </div>
+              <progress className="progress w-56" value={70} max="100"></progress>
+            </motion.div>
+
+            {/* Figma */}
+            <motion.div
+              variants={{
+                hidden: { opacity: 0, y: 50 },
+                visible: { opacity: 1, y: 0 },
+              }}
+              initial="hidden"
+              animate="visible"
+              transition={{ duration: 1 }}
+              className="flex flex-row gap-4 items-center"
+            >
+              <div className="flex flex-row items-center gap-2 w-36">
+                <SiFigma className="text-2xl" />
+                <span className="text-sm">Figma</span>
+              </div>
+              <progress className="progress w-56" value={50} max="100"></progress>
+            </motion.div>
+
+            {/* Premiere Pro */}
+            <motion.div
+              variants={{
+                hidden: { opacity: 0, y: 50 },
+                visible: { opacity: 1, y: 0 },
+              }}
+              initial="hidden"
+              animate="visible"
+              transition={{ duration: 1 }}
+              className="flex flex-row gap-4 items-center"
+            >
+              <div className="flex flex-row items-center gap-2 w-36">
+                <SiAdobepremierepro className="text-2xl" />
+                <span className="text-sm">Premiere Pro</span>
+              </div>
+              <progress className="progress w-56" value={80} max="100"></progress>
+            </motion.div>
+            
+            {/* Lightroom Classic */}
+            <motion.div
+              variants={{
+                hidden: { opacity: 0, y: 50 },
+                visible: { opacity: 1, y: 0 },
+              }}
+              initial="hidden"
+              animate="visible"
+              transition={{ duration: 1 }}
+              className="flex flex-row gap-4 items-center"
+            >
+              <div className="flex flex-row items-center gap-2 w-36">
+                <SiAdobelightroomclassic className="text-2xl" />
+                <span className="text-sm">Lightroom Classic</span>
+              </div>
+              <progress className="progress w-56" value={80} max="100"></progress>
+            </motion.div>
+            
+            {/* After Effects */}
+            <motion.div
+              variants={{
+                hidden: { opacity: 0, y: 50 },
+                visible: { opacity: 1, y: 0 },
+              }}
+              initial="hidden"
+              animate="visible"
+              transition={{ duration: 1 }}
+              className="flex flex-row gap-4 items-center"
+            >
+              <div className="flex flex-row items-center gap-2 w-36">
+                <SiAdobeaftereffects className="text-2xl" />
+                <span className="text-sm">After Effects</span>
+              </div>
+              <progress className="progress w-56" value={80} max="100"></progress>
+            </motion.div>
+          </div>
+        </motion.div>
+        
         <motion.div 
           variants={{
             hidden: { opacity: 0, y: 50 },

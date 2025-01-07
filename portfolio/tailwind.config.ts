@@ -12,6 +12,9 @@ const config: Config = {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      maxWidth: {
+        'readable': '65ch',
+      },
     },
   },
   plugins: [
